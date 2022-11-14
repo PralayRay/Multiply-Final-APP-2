@@ -24,26 +24,26 @@ class ViewController: UIViewController {
     }
     // calculate (RAY)
     
-    @IBAction func operatorSegmentedControl(_ sender: Any) {
-        switch segmentedOutlet.selectedSegmentIndex {
-        case 0:
-            greeting = "Hola"
-        case 1:
-            greeting = "Kem Cho"
-        case 2:
-            greeting = "Namaste"
-        case 3:
-        case 4:
-        case 5:
-        case 6:
+//    @IBAction func operatorSegmentedControl(_ sender: Any) {
+//        switch segmentedOutlet.selectedSegmentIndex {
+//        case 0:
+//            greeting = "Hola"
+//        case 1:
+//            greeting = "Kem Cho"
+//        case 2:
+//            greeting = "Namaste"
+//        case 3:
+//        case 4:
+//        case 5:
+//        case 6:
         }
         
-    }
+    
     
     // kasper (pictures)
     // kasper (sliders)
     // kasper (tip)
     
 
-}
+
 
