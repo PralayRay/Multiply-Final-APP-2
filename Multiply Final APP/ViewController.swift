@@ -42,6 +42,15 @@ class ViewController: UIViewController {
            } else {
                marioKartImageView.image = UIImage(named: "funnier")
            }
+        
+            if  (totalAnswer % 2 == 0) {
+                view.backgroundColor = .lightGray
+                 } else {
+                     view.backgroundColor = .systemPink
+                 }
+
+        
+        
        }
     
     
@@ -131,7 +140,7 @@ class ViewController: UIViewController {
 //        marioKartImageView.image = UIImage(named: "funnier")
 //         }
 //
-//    if  % 2 == 0 {
+//    if  (totalAnswer % 2 == 0) {
 //        view.backgroundColor = .blue
 //         } else {
 //             view.backgroundColor = .green
