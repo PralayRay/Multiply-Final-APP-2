@@ -18,32 +18,81 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var segmentedOutlet: UISegmentedControl!
     
+    @IBOutlet weak var tipTextField: UITextField!
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     // calculate (RAY)
     
-//    @IBAction func operatorSegmentedControl(_ sender: Any) {
-//        switch segmentedOutlet.selectedSegmentIndex {
-//        case 0:
-//            greeting = "Hola"
-//        case 1:
-//            greeting = "Kem Cho"
-//        case 2:
-//            greeting = "Namaste"
-//        case 3:
-//        case 4:
-//        case 5:
-//        case 6:
-        }
+    
+    @IBAction func operatorSegmentedControl(_ sender: Any) {
         
+        var firstNumber = firstNumberTextField.text!
+        var secondNumber = secondNumberTextField.text!
+        let firstValue = (firstNumber as NSString).integerValue
+        let secondValue = (secondNumber as NSString).integerValue
+        var totalAnswer = 0
+        switch segmentedOutlet.selectedSegmentIndex {
+        case 0:
+            totalAnswer = firstValue + secondValue
+            totalNumberLabel.text = "\(totalAnswer)"
+            operaterLabel.text = "+"
+        case 1:
+            totalAnswer = firstValue - secondValue
+            totalNumberLabel.text = "\(totalAnswer)"
+            operaterLabel.text = "-"
+        case 2:
+            totalAnswer = firstValue * secondValue
+            totalNumberLabel.text = "\(totalAnswer)"
+            operaterLabel.text = "*"
+        case 3:
+            totalAnswer = firstValue / secondValue
+            totalNumberLabel.text = "\(totalAnswer)"
+            operaterLabel.text = "/"
+        case 4:
+            totalAnswer = firstValue % secondValue
+            totalNumberLabel.text = "\(totalAnswer)"
+            operaterLabel.text = "%"
+        case 5:
+            totalAnswer = firstValue * firstValue
+            var totalAnswerTwo = secondValue * secondValue
+            totalNumberLabel.text = "\(totalAnswer) and \(totalAnswerTwo)"
+        
+        default:
+            totalAnswer = 0
+        }
+    }
     
     
     // kasper (pictures)
     // kasper (sliders)
-    // kasper (tip)
+    
+    @IBAction func finalTipAction(_ sender: Any) {
+        var finalTip:Double = 0.00 // store final into this
+        var tempTip = tipTextField.text! // takes number by user
+        var tipValue = (tempTip as NSString).doubleValue // allows use) (USE THIS VAR EVERYTIME)
+        var holderNumberValue = tipValue * 0.15
+        
+        finalTip = Double(tipValue + holderNumberValue)
+         
+        
+        totalNumberLabel.text = "\(finalTip)"
+    }
+    
+    @IBAction func sliderOne(_ sender: UISlider) {
+        sender.minimumValue = 0
+        sender.maximumValue = 500
+        firstNumberTextField.text = String(Int(sender.value))          }
+    @IBAction func sliderTwo(_ sender: UISlider) {
+        sender.minimumValue = 0
+        sender.maximumValue = 500
+        secondNumberTextField.text = String(Int(sender.value))          }
+    }
     
 
+    
 
 
