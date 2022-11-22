@@ -118,6 +118,7 @@ Answer will be displayed in the middle.</string>
                     </view>
                     <connections>
                         <outlet property="firstNumberTextField" destination="O4l-qb-dio" id="mYr-Cu-SgC"/>
+                        <outlet property="marioKartImageView" destination="Br8-qq-Vas" id="RXR-iF-fTT"/>
                         <outlet property="operaterLabel" destination="8F7-mt-Mhr" id="Gnn-QA-hh1"/>
                         <outlet property="secondNumberTextField" destination="4tu-Ep-lyM" id="6Cl-af-Ase"/>
                         <outlet property="segmentedOutlet" destination="aqh-Rt-sgJ" id="8za-uS-O3E"/>

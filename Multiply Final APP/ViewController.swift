@@ -20,12 +20,30 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tipTextField: UITextField!
     
-
+    @IBOutlet weak var marioKartImageView: UIImageView!
+    
+    var totalAnswer = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+        
     }
     // calculate (RAY)
+    func updateImageView(for number: Int) {
+        if totalAnswer == 64 {
+            marioKartImageView.image = UIImage (named: "mario")
+        }
+
+        else if totalAnswer % 2 == 0 {
+               marioKartImageView.image = UIImage(named: "funny")
+           } else {
+               marioKartImageView.image = UIImage(named: "funnier")
+           }
+       }
+    
     
     
     @IBAction func operatorSegmentedControl(_ sender: Any) {
@@ -34,35 +52,45 @@ class ViewController: UIViewController {
         var secondNumber = secondNumberTextField.text!
         let firstValue = (firstNumber as NSString).integerValue
         let secondValue = (secondNumber as NSString).integerValue
-        var totalAnswer = 0
+        // var totalAnswer = 0
         switch segmentedOutlet.selectedSegmentIndex {
         case 0:
             totalAnswer = firstValue + secondValue
             totalNumberLabel.text = "\(totalAnswer)"
             operaterLabel.text = "+"
+            updateImageView(for: totalAnswer)
         case 1:
             totalAnswer = firstValue - secondValue
             totalNumberLabel.text = "\(totalAnswer)"
             operaterLabel.text = "-"
+            updateImageView(for: totalAnswer)
         case 2:
             totalAnswer = firstValue * secondValue
             totalNumberLabel.text = "\(totalAnswer)"
             operaterLabel.text = "*"
+            updateImageView(for: totalAnswer)
         case 3:
             totalAnswer = firstValue / secondValue
             totalNumberLabel.text = "\(totalAnswer)"
             operaterLabel.text = "/"
+            updateImageView(for: totalAnswer)
         case 4:
             totalAnswer = firstValue % secondValue
             totalNumberLabel.text = "\(totalAnswer)"
             operaterLabel.text = "%"
+            updateImageView(for: totalAnswer)
         case 5:
             totalAnswer = firstValue * firstValue
             var totalAnswerTwo = secondValue * secondValue
             totalNumberLabel.text = "\(totalAnswer) and \(totalAnswerTwo)"
+            updateImageView(for: totalAnswer)
         
         default:
             totalAnswer = 0
+            updateImageView(for: totalAnswer)
+            
+            
+            
         }
     }
     
@@ -89,8 +117,29 @@ class ViewController: UIViewController {
     @IBAction func sliderTwo(_ sender: UISlider) {
         sender.minimumValue = 0
         sender.maximumValue = 500
-        secondNumberTextField.text = String(Int(sender.value))          }
+        secondNumberTextField.text = String(Int(sender.value))
     }
+
+//    if totalNumberLabel.text == 64 {
+//        marioKartImageView.image = UIImage(named: "mario")
+//
+//    }
+//    else if  % 2 == 0 {
+//        marioKartImageView.image = UIImage(named: "funny")
+//         }
+//    else {
+//        marioKartImageView.image = UIImage(named: "funnier")
+//         }
+//
+//    if  % 2 == 0 {
+//        view.backgroundColor = .blue
+//         } else {
+//             view.backgroundColor = .green
+//         }
+
+    
+    
+}
     
 
     
