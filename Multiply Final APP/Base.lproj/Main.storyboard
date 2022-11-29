@@ -45,7 +45,6 @@
                                     <segment title="/"/>
                                     <segment title="%"/>
                                     <segment title="x^2"/>
-                                    <segment title="sqrt"/>
                                 </segments>
                                 <connections>
                                     <action selector="operatorSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="Con-mm-mUi"/>
@@ -112,6 +111,15 @@ Answer will be displayed in the middle.</string>
                                     <action selector="sliderTwo:" destination="BYZ-38-t0r" eventType="valueChanged" id="Isd-Xb-uat"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXD-P9-KhM">
+                                <rect key="frame" x="166" y="800" width="84" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Clear"/>
+                                <connections>
+                                    <action selector="clearApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xzY-We-4GQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

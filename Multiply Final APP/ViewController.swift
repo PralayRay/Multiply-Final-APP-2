@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Multiply Final APP
 //
-//  Created by Pralay T Ray (Student) on 11/14/22.
+//  Created by Pralay T Ray & Kacper P Grodek (Student) on 11/14/22.
 //
 
 import UIKit
@@ -48,9 +48,6 @@ class ViewController: UIViewController {
                  } else {
                      view.backgroundColor = .systemPink
                  }
-
-        
-        
        }
     
     
@@ -128,23 +125,14 @@ class ViewController: UIViewController {
         sender.maximumValue = 500
         secondNumberTextField.text = String(Int(sender.value))
     }
-
-//    if totalNumberLabel.text == 64 {
-//        marioKartImageView.image = UIImage(named: "mario")
-//
-//    }
-//    else if  % 2 == 0 {
-//        marioKartImageView.image = UIImage(named: "funny")
-//         }
-//    else {
-//        marioKartImageView.image = UIImage(named: "funnier")
-//         }
-//
-//    if  (totalAnswer % 2 == 0) {
-//        view.backgroundColor = .blue
-//         } else {
-//             view.backgroundColor = .green
-//         }
+    @IBAction func clearApp(_ sender: Any) {
+        firstNumberTextField.text = " "
+        secondNumberTextField.text = " "
+        firstNumberTextField.resignFirstResponder()
+        secondNumberTextField.resignFirstResponder()
+        marioKartImageView.image = UIImage(named: "nil")
+        view.backgroundColor = .white
+      }
 
     
     
